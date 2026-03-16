@@ -13,6 +13,10 @@ const faqs = [
     a: "My core specialisations are technical translation and marketing translation. I have extensive experience in IT, software, industrial manufacturing, automotive, retail and mobility sectors. I also work on academic texts, corporate communications and software localisation.",
   },
   {
+    q: "Why should I work with you instead of using machine translation and AI?",
+    a: "Technology still has its limits, and if you need the highest level of accuracy, deal with complexity, or have a carefully crafted brand voice, you need a human to ensure accuracy and quality. I can also check machine translations for accuracy and consistency, or do the whole project from scratch. Feel free to reach out with your documents and we can take it from there.",
+  },
+  {
     q: "What file formats do you accept?",
     a: "I work with most common formats including Word (.docx), Excel, PowerPoint, PDF (editable and scanned), HTML, XML, XLIFF and plain text. For software localisation I can handle PO files and JSON strings. If you have a different format, feel free to ask.",
   },
@@ -35,6 +39,18 @@ const faqs = [
   {
     q: "Do you offer certified or sworn translations?",
     a: "I hold the CIOL Diploma in Translation (Level 7, Master's level equivalent), which demonstrates professional qualification. For legally certified or court-sworn translations, please enquire directly, as requirements vary by country and institution.",
+  },
+  {
+    q: "I need translations into other languages, not just English.",
+    a: "While I only offer translations from German into English, I have an extensive network of talented colleagues, so it is possible we can also provide any other language combinations you might require. Feel free to reach out with the specifics of your project and we will see what we can do.",
+  },
+  {
+    q: "Can you translate a birth certificate for me?",
+    a: "No, unfortunately I do not offer translations of official documents. Feel free to reach out and I can recommend a colleague who can provide these for you.",
+  },
+  {
+    q: "Why work with a freelance language professional?",
+    a: "Working together means that we can communicate directly, there is no overhead and back and forth. Your documents will always be translated by me, ensuring consistent terminology, voice and style. I can take care of as much of the process as you need – maybe you already have English texts you need me to check, or you want me to take over the entire process so you don't have to worry about a thing. Let me know what you need.",
   },
 ];
 

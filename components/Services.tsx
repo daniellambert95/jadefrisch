@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import FadeIn from "./FadeIn";
 
 const services = [
@@ -8,24 +9,32 @@ const services = [
     title: "Technical Translation",
     description:
       "Precise DE↔EN translation of manuals, specifications, data sheets, software documentation and engineering content. Specialised across IT, automotive and industrial manufacturing sectors.",
+    href: "/services/technical",
+    linkLabel: "Learn more",
   },
   {
     num: "02",
     title: "Marketing Translation & Transcreation",
     description:
       "DE↔EN translation of marketing copy, campaigns, product descriptions and websites. More than word-for-word — tone, intent and cultural nuance are preserved for the target audience.",
+    href: "/services/marketing",
+    linkLabel: "Learn more",
   },
   {
     num: "03",
     title: "Proofreading & Editing",
     description:
       "Native-level English proofreading of any text, whether translated or originally authored. Grammar, spelling, punctuation and style refined for academic, marketing and corporate contexts.",
+    href: "/contact",
+    linkLabel: "Get in touch",
   },
   {
     num: "04",
     title: "Linguistic Validation & Localisation",
     description:
       "Software and app localisation — UI strings, help content and user-facing copy. Content adapted for AU, UK and US English variants, with linguistic validation against the source.",
+    href: "/contact",
+    linkLabel: "Get in touch",
   },
 ];
 
@@ -33,45 +42,65 @@ export default function Services() {
   return (
     <section id="services" className="py-28 md:py-36 bg-ivory">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        {/* Section header */}
-        <FadeIn>
-          <div className="mb-16 md:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 md:gap-24 items-start">
+
+          {/* Left — sticky label + intro + CTA */}
+          <FadeIn className="lg:sticky lg:top-32">
             <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-(family-name:--font-dm-sans) font-medium mb-4">
               What I offer
             </p>
-            <h2 className="font-(family-name:--font-cormorant) text-[clamp(2.5rem,5vw,4rem)] font-light text-charcoal leading-tight">
+            <h2 className="font-(family-name:--font-cormorant) text-[clamp(2.5rem,5vw,4rem)] font-light text-charcoal leading-tight mb-6">
               Services
             </h2>
-          </div>
-        </FadeIn>
-
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-charcoal/10">
-          {services.map((service, i) => (
-            <FadeIn
-              key={service.num}
-              delay={i * 0.08}
-              className="group relative bg-ivory p-10 md:p-12 hover:bg-white transition-colors duration-400 overflow-hidden"
+            <div className="w-10 h-px bg-gold mb-8" />
+            <p className="font-(family-name:--font-dm-sans) font-light text-muted text-base leading-relaxed mb-10">
+              Technical and marketing translations from German into English —
+              precise, authentic and tailored to your audience.
+            </p>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory bg-charcoal font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:bg-gold transition-colors duration-300"
             >
-              {/* Gold left border on hover */}
-              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-400 origin-bottom" />
+              All services
+            </Link>
+          </FadeIn>
 
-              {/* Number accent */}
-              <span className="font-(family-name:--font-cormorant) text-[5rem] md:text-[7rem] leading-none font-light text-charcoal/6 absolute top-4 right-8 select-none pointer-events-none">
-                {service.num}
-              </span>
+          {/* Right — 2×2 card grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-charcoal/10">
+            {services.map((service, i) => (
+              <FadeIn
+                key={service.num}
+                delay={i * 0.07}
+                className="group relative bg-ivory p-8 md:p-10 hover:bg-white transition-colors duration-300 overflow-hidden flex flex-col"
+              >
+                {/* Gold left border on hover */}
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-400 origin-bottom" />
 
-              {/* Gold dash */}
-              <div className="w-6 h-px bg-gold mb-6" />
+                {/* Number watermark */}
+                <span className="font-(family-name:--font-cormorant) text-[4.5rem] leading-none font-light text-charcoal/6 absolute top-2 right-4 select-none pointer-events-none">
+                  {service.num}
+                </span>
 
-              <h3 className="font-(family-name:--font-cormorant) text-2xl md:text-3xl font-medium text-charcoal mb-4 tracking-wide">
-                {service.title}
-              </h3>
-              <p className="font-(family-name:--font-dm-sans) text-muted font-light text-sm md:text-base leading-relaxed">
-                {service.description}
-              </p>
-            </FadeIn>
-          ))}
+                <div className="w-5 h-px bg-gold mb-5" />
+
+                <h3 className="font-(family-name:--font-cormorant) text-xl md:text-2xl font-medium text-charcoal mb-3 tracking-wide">
+                  {service.title}
+                </h3>
+                <p className="font-(family-name:--font-dm-sans) text-muted font-light text-sm leading-relaxed flex-1">
+                  {service.description}
+                </p>
+                <div className="mt-6">
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center gap-2.5 text-[10px] uppercase tracking-[0.2em] text-charcoal border border-charcoal/20 font-(family-name:--font-dm-sans) font-medium px-5 py-2.5 hover:border-charcoal hover:bg-charcoal hover:text-ivory transition-colors duration-300"
+                  >
+                    {service.linkLabel}
+                  </Link>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

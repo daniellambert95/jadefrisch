@@ -22,11 +22,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Jade Frisch — German–English Translator",
   description:
-    "Native English speaker with 9+ years translating technical, IT and marketing content. Based in Berlin.",
+    "Native English speaker with over ten years translating technical and marketing content from German into English. Based in Berlin.",
   openGraph: {
     title: "Jade Frisch — German–English Translator",
     description:
-      "Native English speaker with 9+ years translating technical, IT and marketing content. Based in Berlin.",
+      "Native English speaker with over ten years translating technical and marketing content from German into English. Based in Berlin.",
     locale: "en_AU",
     type: "website",
   },

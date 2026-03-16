@@ -47,24 +47,24 @@ export default function About({ hideHeading = false, ctaHref }: { hideHeading?: 
 
               <div className="space-y-5 font-(family-name:--font-dm-sans) font-light text-ivory/70 text-base leading-relaxed">
                 <p>
-                  In 2013, Jade moved from Australia to Berlin to study and
-                  pursue her interest in languages. In 2016, her career as a
-                  translator began at a software company. Since then, she has
-                  translated, edited, proofread and corrected millions of words.
+                  In 2016, my career began as the in-house English translator for
+                  a German software company, where I localised the software
+                  interface, training documentation, newsletters and blogs for
+                  the international market. Since then, I have been a trusted
+                  language expert for a range of businesses in the automotive,
+                  logistics, retail and industrial engineering sectors.
                 </p>
                 <p>
-                  Technical and marketing translations are her specialisations,
-                  with clients spanning the IT, industrial manufacturing,
-                  automotive, retail and mobility sectors. Additional services
-                  include the proofreading and editing of academic and marketing
-                  texts in English, as well as content and software localisation
-                  for different English variants.
+                  I am a qualified and recognised professional, as a member of
+                  the Bundesverband für Dolmetschen und Übersetzer (BDÜ,
+                  Germany) and the Chartered Institute of Linguists (CIOL, UK).
+                  I have passed the Diploma in Translation exam and have a
+                  Master of Arts in Linguistics from Freie Universität Berlin.
                 </p>
                 <p>
-                  She holds a master's degree in linguistics from the Freie
-                  Universität Berlin, where she studied French and Spanish, and
-                  spent a semester studying translation at the Universitat de
-                  València.
+                  Having lived in Germany since 2013, I understand the cultural
+                  nuances and exactly how to localise them for wherever your
+                  brand wants to be.
                 </p>
               </div>
 
@@ -72,10 +72,9 @@ export default function About({ hideHeading = false, ctaHref }: { hideHeading?: 
                 <div className="mt-10">
                   <Link
                     href={ctaHref}
-                    className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory/60 hover:text-ivory font-(family-name:--font-dm-sans) font-medium group transition-colors duration-300"
+                    className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory border border-ivory/30 font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:border-ivory transition-colors duration-300"
                   >
                     Read more about me
-                    <span className="w-8 h-px bg-gold transition-all duration-300 group-hover:w-12" />
                   </Link>
                 </div>
               )}

@@ -7,9 +7,16 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 
 const navLinks = [
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    href: "/services",
+    match: "startsWith" as const,
+    children: [
+      { label: "Technical Translation", href: "/services/technical" },
+      { label: "Marketing Translation", href: "/services/marketing" },
+    ],
+  },
   { label: "About", href: "/about" },
-  { label: "Credentials", href: "/credentials" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -32,9 +39,15 @@ const itemVariants: Variants = {
   open: { opacity: 1, y: 0, transition: { duration: 0.45, ease } },
 };
 
+const dropdownVariants: Variants = {
+  hidden: { opacity: 0, y: -6 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeOut" } },
+};
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
@@ -48,12 +61,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -85,7 +96,57 @@ export default function Header() {
           <nav className="hidden md:block">
             <ul className="flex items-center gap-9">
               {navLinks.map((link) => {
-                const active = pathname === link.href;
+                const active = link.match === "startsWith" ? pathname.startsWith(link.href) : pathname === link.href;
+
+                if (link.children) {
+                  return (
+                    <li
+                      key={link.href}
+                      className="relative"
+                      onMouseEnter={() => setServicesOpen(true)}
+                      onMouseLeave={() => setServicesOpen(false)}
+                    >
+                      <Link
+                        href={link.href}
+                        className={`text-[11px] uppercase tracking-[0.18em] font-(family-name:--font-dm-sans) font-medium transition-colors duration-300 ${
+                          active ? "text-gold" : "text-muted hover:text-charcoal"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+
+                      <AnimatePresence>
+                        {servicesOpen && (
+                          <motion.div
+                            key="services-dropdown"
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={dropdownVariants}
+                            className="absolute top-full left-0 pt-4"
+                          >
+                            <div className="bg-ivory border border-charcoal/10 shadow-sm min-w-55">
+                              {link.children.map((child) => (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  className={`block px-5 py-3.5 text-[10px] uppercase tracking-[0.18em] font-(family-name:--font-dm-sans) font-medium transition-colors duration-200 border-b border-charcoal/8 last:border-0 ${
+                                    pathname === child.href
+                                      ? "text-gold bg-charcoal/3"
+                                      : "text-muted hover:text-charcoal hover:bg-charcoal/3"
+                                  }`}
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </li>
+                  );
+                }
+
                 return (
                   <li key={link.href}>
                     <Link
@@ -128,7 +189,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Fullscreen mobile menu — portalled to document.body */}
+      {/* Fullscreen mobile menu */}
       {mounted && createPortal(
         <AnimatePresence>
           {menuOpen && (
@@ -140,19 +201,34 @@ export default function Header() {
               variants={menuVariants}
               className="md:hidden fixed inset-0 z-55 bg-ivory flex flex-col items-center justify-center"
             >
-              <ul className="flex flex-col items-center gap-2 w-full px-8">
+              <ul className="flex flex-col items-center gap-1 w-full px-8">
                 {navLinks.map((link) => {
-                  const active = pathname === link.href;
+                  const active = link.match === "startsWith" ? pathname.startsWith(link.href) : pathname === link.href;
                   return (
                     <motion.li key={link.href} variants={itemVariants} className="w-full text-center">
                       <Link
                         href={link.href}
-                        className={`block py-4 font-(family-name:--font-cormorant) text-3xl font-light tracking-[0.12em] transition-colors duration-300 ${
+                        className={`block py-3 font-(family-name:--font-cormorant) text-3xl font-light tracking-[0.12em] transition-colors duration-300 ${
                           active ? "text-gold" : "text-charcoal-80 hover:text-gold"
                         }`}
                       >
                         {link.label}
                       </Link>
+                      {link.children && (
+                        <div className="flex items-center justify-center gap-6 pb-2">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className={`text-[10px] uppercase tracking-[0.18em] font-(family-name:--font-dm-sans) font-medium transition-colors duration-300 ${
+                                pathname === child.href ? "text-gold" : "text-muted hover:text-charcoal"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </motion.li>
                   );
                 })}

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 
 const container: Variants = {
@@ -59,11 +60,11 @@ export default function Hero() {
           Berlin, Germany
         </motion.p>
 
-        {/* Name — padding-top to prevent J ascender clipping */}
+        {/* Name */}
         <div className="mb-3 pt-2">
           <motion.h1
             variants={lineReveal}
-            className="font-(family-name:--font-cormorant) text-[clamp(4rem,10vw,9rem)] font-light leading-[1] tracking-[-0.01em] text-charcoal"
+            className="font-(family-name:--font-cormorant) text-[clamp(4rem,10vw,9rem)] font-light leading-none tracking-[-0.01em] text-charcoal"
           >
             Jade Frisch
           </motion.h1>
@@ -88,19 +89,24 @@ export default function Hero() {
           variants={fadeIn}
           className="text-muted font-(family-name:--font-dm-sans) font-light text-base md:text-lg leading-relaxed max-w-lg"
         >
-          A native English speaker and linguist with over nine years of experience
+          A native English speaker and linguist with over ten years of experience
           translating and localising German technical, IT and marketing content.
         </motion.p>
 
-        {/* CTA */}
-        <motion.div variants={fadeIn} className="mt-12">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-charcoal font-(family-name:--font-dm-sans) font-medium group"
+        {/* CTAs */}
+        <motion.div variants={fadeIn} className="mt-10 flex flex-wrap items-center gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory bg-charcoal font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:bg-gold transition-colors duration-300"
           >
             Get in touch
-            <span className="w-10 h-px bg-gold transition-all duration-300 group-hover:w-16" />
-          </a>
+          </Link>
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-charcoal border border-charcoal/30 font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:border-charcoal transition-colors duration-300"
+          >
+            View services
+          </Link>
         </motion.div>
       </motion.div>
 

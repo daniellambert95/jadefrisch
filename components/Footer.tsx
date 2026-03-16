@@ -1,18 +1,38 @@
 import Link from "next/link";
 
+const footerLinks = [
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-ivory border-t border-charcoal/10 py-10">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <Link
           href="/"
           className="font-(family-name:--font-cormorant) text-lg font-semibold tracking-[0.15em] text-gold hover:text-charcoal transition-colors duration-300"
         >
           JF
         </Link>
-        <p className="font-(family-name:--font-dm-sans) text-[11px] uppercase tracking-[0.15em] text-muted/60 text-center">
-          German–English Translator <br /> Berlin
-        </p>
+
+        <nav>
+          <ul className="flex items-center gap-6 md:gap-8">
+            {footerLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="font-(family-name:--font-dm-sans) text-[10px] uppercase tracking-[0.18em] text-muted/70 hover:text-charcoal transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <a
           href="mailto:info@jadefrisch.com"
           className="font-(family-name:--font-dm-sans) text-[11px] uppercase tracking-[0.15em] text-muted hover:text-gold transition-colors duration-300"
