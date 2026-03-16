@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import FadeIn from "./FadeIn";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/lib/translations";
 
 export default function Contact({ hideHeading = false }: { hideHeading?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const { lang } = useLanguage();
+  const tr = t[lang].contact;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,19 +27,18 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
               {!hideHeading && (
                 <>
                   <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-(family-name:--font-dm-sans) font-medium mb-4">
-                    Get in touch
+                    {tr.overline}
                   </p>
                   <h2 className="font-(family-name:--font-cormorant) text-[clamp(2.5rem,5vw,4rem)] font-light text-charcoal leading-tight mb-8">
-                    Let's work
-                    <br />
-                    together.
+                    {tr.heading.split("\n").map((line, i, arr) => (
+                      <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                    ))}
                   </h2>
                 </>
               )}
               <div className="w-10 h-px bg-gold mb-8" />
               <p className="font-(family-name:--font-dm-sans) font-light text-muted text-base leading-relaxed mb-8">
-                Whether you have a project in mind or simply want to discuss
-                your needs, I'm happy to hear from you.
+                {tr.intro}
               </p>
 
               <a
@@ -68,14 +71,14 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
           {/* Right: form */}
           <FadeIn delay={0.15}>
             {status === "sent" ? (
-              <div className="flex items-center justify-center h-full min-h-[300px]">
+              <div className="flex items-center justify-center h-full min-h-75">
                 <div className="text-center">
                   <div className="w-10 h-px bg-gold mx-auto mb-6" />
                   <p className="font-(family-name:--font-cormorant) text-2xl font-light text-charcoal mb-2">
-                    Thank you.
+                    {tr.thankYou}
                   </p>
                   <p className="font-(family-name:--font-dm-sans) font-light text-muted text-sm">
-                    I'll be in touch shortly.
+                    {tr.inTouch}
                   </p>
                 </div>
               </div>
@@ -84,13 +87,13 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
                 {/* Name */}
                 <div className="group">
                   <label className="block text-[10px] uppercase tracking-[0.2em] text-muted font-(family-name:--font-dm-sans) font-medium mb-3">
-                    Name
+                    {tr.labelName}
                   </label>
                   <input
                     type="text"
                     name="name"
                     required
-                    placeholder="Your name"
+                    placeholder={tr.placeholderName}
                     className="w-full bg-transparent border-0 border-b border-charcoal/20 pb-3 text-charcoal font-(family-name:--font-dm-sans) font-light text-base placeholder:text-charcoal/30 focus:outline-none focus:border-gold transition-colors duration-300"
                   />
                 </div>
@@ -98,13 +101,13 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
                 {/* Email */}
                 <div>
                   <label className="block text-[10px] uppercase tracking-[0.2em] text-muted font-(family-name:--font-dm-sans) font-medium mb-3">
-                    Email
+                    {tr.labelEmail}
                   </label>
                   <input
                     type="email"
                     name="email"
                     required
-                    placeholder="your@email.com"
+                    placeholder={tr.placeholderEmail}
                     className="w-full bg-transparent border-0 border-b border-charcoal/20 pb-3 text-charcoal font-(family-name:--font-dm-sans) font-light text-base placeholder:text-charcoal/30 focus:outline-none focus:border-gold transition-colors duration-300"
                   />
                 </div>
@@ -112,13 +115,13 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
                 {/* Message */}
                 <div>
                   <label className="block text-[10px] uppercase tracking-[0.2em] text-muted font-(family-name:--font-dm-sans) font-medium mb-3">
-                    Message
+                    {tr.labelMessage}
                   </label>
                   <textarea
                     name="message"
                     required
                     rows={4}
-                    placeholder="Tell me about your project..."
+                    placeholder={tr.placeholderMessage}
                     className="w-full bg-transparent border-0 border-b border-charcoal/20 pb-3 text-charcoal font-(family-name:--font-dm-sans) font-light text-base placeholder:text-charcoal/30 focus:outline-none focus:border-gold transition-colors duration-300 resize-none"
                   />
                 </div>
@@ -129,7 +132,7 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
                   disabled={status === "sending"}
                   className="group flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-ivory bg-charcoal font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:bg-gold transition-colors duration-400 disabled:opacity-60"
                 >
-                  {status === "sending" ? "Sending…" : "Send message"}
+                  {status === "sending" ? tr.sending : tr.submit}
                   <span className="w-4 h-px bg-current transition-all duration-300 group-hover:w-7" />
                 </button>
               </form>

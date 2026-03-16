@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/lib/translations";
 
 const container: Variants = {
   hidden: {},
@@ -32,6 +34,9 @@ const fadeIn: Variants = {
 };
 
 export default function Hero() {
+  const { lang } = useLanguage();
+  const tr = t[lang].hero;
+
   return (
     <section
       id="hero"
@@ -57,7 +62,7 @@ export default function Hero() {
           variants={lineReveal}
           className="text-[11px] uppercase tracking-[0.25em] text-gold font-(family-name:--font-dm-sans) font-medium mb-6"
         >
-          Berlin, Germany
+          {tr.location}
         </motion.p>
 
         {/* Name */}
@@ -66,7 +71,7 @@ export default function Hero() {
             variants={lineReveal}
             className="font-(family-name:--font-cormorant) text-[clamp(4rem,10vw,9rem)] font-light leading-none tracking-[-0.01em] text-charcoal"
           >
-            Jade Frisch
+            {tr.name}
           </motion.h1>
         </div>
 
@@ -75,7 +80,7 @@ export default function Hero() {
           variants={lineReveal}
           className="font-(family-name:--font-cormorant) text-[clamp(1.5rem,3.5vw,2.6rem)] font-light italic text-muted tracking-wide mb-8"
         >
-          German–English Translator
+          {tr.tagline}
         </motion.p>
 
         {/* Gold rule */}
@@ -89,8 +94,7 @@ export default function Hero() {
           variants={fadeIn}
           className="text-muted font-(family-name:--font-dm-sans) font-light text-base md:text-lg leading-relaxed max-w-lg"
         >
-          A native English speaker and linguist with over ten years of experience
-          translating and localising German technical, IT and marketing content.
+          {tr.bio}
         </motion.p>
 
         {/* CTAs */}
@@ -99,13 +103,13 @@ export default function Hero() {
             href="/contact"
             className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory bg-charcoal font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:bg-gold transition-colors duration-300"
           >
-            Get in touch
+            {tr.cta1}
           </Link>
           <Link
             href="/services"
             className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-charcoal border border-charcoal/30 font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:border-charcoal transition-colors duration-300"
           >
-            View services
+            {tr.cta2}
           </Link>
         </motion.div>
       </motion.div>
@@ -118,7 +122,7 @@ export default function Hero() {
         transition={{ delay: 1.8, duration: 0.8 }}
       >
         <span className="text-[10px] uppercase tracking-[0.2em] text-muted/60 font-(family-name:--font-dm-sans)">
-          Scroll
+          {tr.scroll}
         </span>
         <div className="w-px h-10 bg-linear-to-b from-muted/40 to-transparent" />
       </motion.div>

@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
+"use client";
+
 import PageHero from "@/components/PageHero";
 import Contact from "@/components/Contact";
-
-export const metadata: Metadata = {
-  title: "Contact — Jade Frisch",
-  description:
-    "Get in touch to discuss your translation, proofreading or localisation project. Based in Berlin.",
-};
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/lib/translations";
 
 export default function ContactPage() {
+  const { lang } = useLanguage();
+  const tr = t[lang].contactPage;
+
   return (
     <>
       <PageHero
-        overline="Get in touch"
-        title="Let's work together."
-        subtitle="I'm happy to discuss your project — no obligation."
+        overline={tr.overline}
+        title={tr.title}
+        subtitle={tr.subtitle}
       />
       <Contact hideHeading />
     </>

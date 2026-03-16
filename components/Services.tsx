@@ -2,43 +2,15 @@
 
 import Link from "next/link";
 import FadeIn from "./FadeIn";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/lib/translations";
 
-const services = [
-  {
-    num: "01",
-    title: "Technical Translation",
-    description:
-      "Precise DE↔EN translation of manuals, specifications, data sheets, software documentation and engineering content. Specialised across IT, automotive and industrial manufacturing sectors.",
-    href: "/services/technical",
-    linkLabel: "Learn more",
-  },
-  {
-    num: "02",
-    title: "Marketing Translation & Transcreation",
-    description:
-      "DE↔EN translation of marketing copy, campaigns, product descriptions and websites. More than word-for-word — tone, intent and cultural nuance are preserved for the target audience.",
-    href: "/services/marketing",
-    linkLabel: "Learn more",
-  },
-  {
-    num: "03",
-    title: "Proofreading & Editing",
-    description:
-      "Native-level English proofreading of any text, whether translated or originally authored. Grammar, spelling, punctuation and style refined for academic, marketing and corporate contexts.",
-    href: "/contact",
-    linkLabel: "Get in touch",
-  },
-  {
-    num: "04",
-    title: "Linguistic Validation & Localisation",
-    description:
-      "Software and app localisation — UI strings, help content and user-facing copy. Content adapted for AU, UK and US English variants, with linguistic validation against the source.",
-    href: "/contact",
-    linkLabel: "Get in touch",
-  },
-];
+const serviceHrefs = ["/services/technical", "/services/marketing", "/contact", "/contact"];
 
 export default function Services() {
+  const { lang } = useLanguage();
+  const tr = t[lang].services;
+
   return (
     <section id="services" className="py-28 md:py-36 bg-ivory">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
@@ -47,27 +19,26 @@ export default function Services() {
           {/* Left — sticky label + intro + CTA */}
           <FadeIn className="lg:sticky lg:top-32">
             <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-(family-name:--font-dm-sans) font-medium mb-4">
-              What I offer
+              {tr.overline}
             </p>
             <h2 className="font-(family-name:--font-cormorant) text-[clamp(2.5rem,5vw,4rem)] font-light text-charcoal leading-tight mb-6">
-              Services
+              {tr.heading}
             </h2>
             <div className="w-10 h-px bg-gold mb-8" />
             <p className="font-(family-name:--font-dm-sans) font-light text-muted text-base leading-relaxed mb-10">
-              Technical and marketing translations from German into English —
-              precise, authentic and tailored to your audience.
+              {tr.intro}
             </p>
             <Link
               href="/services"
               className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory bg-charcoal font-(family-name:--font-dm-sans) font-medium px-8 py-4 hover:bg-gold transition-colors duration-300"
             >
-              All services
+              {tr.cta}
             </Link>
           </FadeIn>
 
           {/* Right — 2×2 card grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-charcoal/10">
-            {services.map((service, i) => (
+            {tr.items.map((service, i) => (
               <FadeIn
                 key={service.num}
                 delay={i * 0.07}
@@ -91,7 +62,7 @@ export default function Services() {
                 </p>
                 <div className="mt-6">
                   <Link
-                    href={service.href}
+                    href={serviceHrefs[i]}
                     className="inline-flex items-center gap-2.5 text-[10px] uppercase tracking-[0.2em] text-charcoal border border-charcoal/20 font-(family-name:--font-dm-sans) font-medium px-5 py-2.5 hover:border-charcoal hover:bg-charcoal hover:text-ivory transition-colors duration-300"
                   >
                     {service.linkLabel}

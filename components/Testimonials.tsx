@@ -1,37 +1,29 @@
 "use client";
 
 import FadeIn from "./FadeIn";
-
-const testimonials = [
-  {
-    quote:
-      "I loved to work with Jade. Her ability to keep the best attitude even when the going gets tough, flexibility and great translation skills guarantee that the work will be well done.",
-    author: "DuxTranslations",
-  },
-  {
-    quote:
-      "Jade has done consistently high-quality work, on-time and according to project guidelines.",
-    author: "TBO IntoEnglish",
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/lib/translations";
 
 export default function Testimonials() {
+  const { lang } = useLanguage();
+  const tr = t[lang].testimonials;
+
   return (
     <section className="py-28 md:py-36 bg-charcoal">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <FadeIn>
           <div className="mb-16 md:mb-20">
             <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-(family-name:--font-dm-sans) font-medium mb-4">
-              Testimonials
+              {tr.overline}
             </p>
             <h2 className="font-(family-name:--font-cormorant) text-[clamp(2.5rem,5vw,4rem)] font-light text-ivory leading-tight">
-              What clients say
+              {tr.heading}
             </h2>
           </div>
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-          {testimonials.map((t, i) => (
+          {tr.items.map((testimonial, i) => (
             <FadeIn key={i} delay={i * 0.15}>
               <div className="relative">
                 {/* Decorative quotation mark */}
@@ -53,13 +45,13 @@ export default function Testimonials() {
                   </div>
 
                   <p className="font-(family-name:--font-cormorant) text-xl md:text-2xl font-light italic text-ivory/80 leading-relaxed mb-8">
-                    {t.quote}
+                    {testimonial.quote}
                   </p>
 
                   <div className="flex items-center gap-4">
                     <div className="w-8 h-px bg-gold" />
                     <cite className="not-italic font-(family-name:--font-dm-sans) text-[11px] uppercase tracking-[0.2em] text-gold font-medium">
-                      {t.author}
+                      {testimonial.author}
                     </cite>
                   </div>
                 </blockquote>

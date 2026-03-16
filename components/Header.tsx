@@ -5,21 +5,8 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, Variants } from "framer-motion";
-
-const navLinks = [
-  {
-    label: "Services",
-    href: "/services",
-    match: "startsWith" as const,
-    children: [
-      { label: "Technical Translation", href: "/services/technical" },
-      { label: "Marketing Translation", href: "/services/marketing" },
-    ],
-  },
-  { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/lib/translations";
 
 const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -50,6 +37,23 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { lang, setLang } = useLanguage();
+  const tr = t[lang];
+
+  const navLinks = [
+    {
+      label: tr.nav.services,
+      href: "/services",
+      match: "startsWith" as const,
+      children: [
+        { label: tr.nav.technicalTranslation, href: "/services/technical" },
+        { label: tr.nav.marketingTranslation, href: "/services/marketing" },
+      ],
+    },
+    { label: tr.nav.about, href: "/about" },
+    { label: tr.nav.faq, href: "/faq" },
+    { label: tr.nav.contact, href: "/contact" },
+  ];
 
   useEffect(() => {
     setMounted(true);
@@ -160,32 +164,56 @@ export default function Header() {
                   </li>
                 );
               })}
+
+              {/* Language toggle — desktop */}
+              <li>
+                <button
+                  onClick={() => setLang(lang === "en" ? "de" : "en")}
+                  className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-(family-name:--font-dm-sans) font-medium text-muted hover:text-charcoal transition-colors duration-300"
+                  aria-label={lang === "en" ? "Auf Deutsch wechseln" : "Switch to English"}
+                >
+                  <span>{lang === "en" ? "🇬🇧" : "🇩🇪"}</span>
+                  <span>{lang === "en" ? "EN" : "DE"}</span>
+                </button>
+              </li>
             </ul>
           </nav>
 
-          {/* Hamburger button */}
-          <button
-            onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden relative z-60 flex flex-col justify-center items-center w-8 h-8 gap-1.25"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            <motion.span
-              className="block h-px w-6 origin-center bg-charcoal"
-              animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              transition={{ duration: 0.3, ease }}
-            />
-            <motion.span
-              className="block h-px w-6 origin-center bg-charcoal"
-              animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-              transition={{ duration: 0.2, ease }}
-            />
-            <motion.span
-              className="block h-px w-6 origin-center bg-charcoal"
-              animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              transition={{ duration: 0.3, ease }}
-            />
-          </button>
+          {/* Right side — lang toggle + hamburger (mobile) */}
+          <div className="flex items-center gap-4 md:hidden relative z-60">
+            {/* Language toggle — mobile */}
+            <button
+              onClick={() => setLang(lang === "en" ? "de" : "en")}
+              className="flex items-center gap-1 text-[11px] font-(family-name:--font-dm-sans) font-medium text-muted"
+              aria-label={lang === "en" ? "Auf Deutsch wechseln" : "Switch to English"}
+            >
+              <span>{lang === "en" ? "🇬🇧" : "🇩🇪"}</span>
+            </button>
+
+            {/* Hamburger button */}
+            <button
+              onClick={() => setMenuOpen((v) => !v)}
+              className="flex flex-col justify-center items-center w-8 h-8 gap-1.25"
+              aria-label={menuOpen ? tr.nav.closeMenu : tr.nav.openMenu}
+              aria-expanded={menuOpen}
+            >
+              <motion.span
+                className="block h-px w-6 origin-center bg-charcoal"
+                animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3, ease }}
+              />
+              <motion.span
+                className="block h-px w-6 origin-center bg-charcoal"
+                animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                transition={{ duration: 0.2, ease }}
+              />
+              <motion.span
+                className="block h-px w-6 origin-center bg-charcoal"
+                animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3, ease }}
+              />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -232,6 +260,17 @@ export default function Header() {
                     </motion.li>
                   );
                 })}
+
+                {/* Language toggle in mobile menu */}
+                <motion.li variants={itemVariants} className="w-full text-center mt-4">
+                  <button
+                    onClick={() => setLang(lang === "en" ? "de" : "en")}
+                    className="inline-flex items-center gap-2 font-(family-name:--font-dm-sans) text-[11px] uppercase tracking-[0.2em] text-muted hover:text-charcoal transition-colors duration-300"
+                  >
+                    <span className="text-xl">{lang === "en" ? "🇩🇪" : "🇬🇧"}</span>
+                    <span>{lang === "en" ? "Deutsch" : "English"}</span>
+                  </button>
+                </motion.li>
               </ul>
             </motion.nav>
           )}
