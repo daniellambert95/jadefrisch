@@ -42,7 +42,7 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
               </p>
 
               <a
-                href="mailto:info@jadefrisch.com"
+                href="mailto:frisch.jade@gmail.com"
                 className="group flex items-center gap-3 font-(family-name:--font-dm-sans) text-charcoal font-light text-base hover:text-gold transition-colors duration-300"
               >
                 <svg
@@ -63,7 +63,7 @@ export default function Contact({ hideHeading = false }: { hideHeading?: boolean
                     strokeWidth="1.5"
                   />
                 </svg>
-                info@jadefrisch.com
+                frisch.jade@gmail.com
               </a>
             </div>
           </FadeIn>
