@@ -6,8 +6,8 @@ import FadeIn from "@/components/FadeIn";
 import { useLanguage } from "@/context/LanguageContext";
 import { t } from "@/lib/translations";
 
-const serviceHrefs = ["/services/technical", "/services/marketing", "/contact", "/contact"];
-const serviceDark = [true, true, false, false];
+const serviceHrefs = ["/services/technical", "/services/marketing", "/services/proofreading-localisation"];
+const serviceDark = [true, true, false];
 
 export default function ServicesPage() {
   const { lang } = useLanguage();

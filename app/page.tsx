@@ -4,7 +4,6 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import FadeIn from "@/components/FadeIn";
 import { useLanguage } from "@/context/LanguageContext";
@@ -143,7 +142,6 @@ export default function Home() {
       <Services />
       <WhyProfessional />
       <About ctaHref="/about" />
-      <Testimonials />
       <FAQTeaser />
       <Contact />
     </>

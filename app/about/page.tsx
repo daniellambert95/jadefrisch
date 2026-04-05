@@ -3,7 +3,6 @@
 import PageHero from "@/components/PageHero";
 import About from "@/components/About";
 import QualificationsTimeline from "@/components/QualificationsTimeline";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import { useLanguage } from "@/context/LanguageContext";
 import { t } from "@/lib/translations";
@@ -21,7 +20,6 @@ export default function AboutPage() {
       />
       <About hideHeading />
       <QualificationsTimeline />
-      <Testimonials />
       <Contact />
     </>
   );

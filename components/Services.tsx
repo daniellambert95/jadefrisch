@@ -5,7 +5,7 @@ import FadeIn from "./FadeIn";
 import { useLanguage } from "@/context/LanguageContext";
 import { t } from "@/lib/translations";
 
-const serviceHrefs = ["/services/technical", "/services/marketing", "/contact", "/contact"];
+const serviceHrefs = ["/services/technical", "/services/marketing", "/services/proofreading-localisation"];
 
 export default function Services() {
   const { lang } = useLanguage();
@@ -36,8 +36,8 @@ export default function Services() {
             </Link>
           </FadeIn>
 
-          {/* Right — 2×2 card grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-charcoal/10">
+          {/* Right — 3-row stack */}
+          <div className="flex flex-col gap-px bg-charcoal/10">
             {tr.items.map((service, i) => (
               <FadeIn
                 key={service.num}

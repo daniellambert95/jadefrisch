@@ -53,7 +53,7 @@ export default function About({ hideHeading = false, ctaHref }: { hideHeading?: 
               <div className="space-y-5 font-(family-name:--font-dm-sans) font-light text-ivory/70 text-base leading-relaxed">
                 <p>{tr.bio1}</p>
                 <p>{tr.bio2}</p>
-                <p>{tr.bio3}</p>
+                {tr.bio3 && <p>{tr.bio3}</p>}
               </div>
 
               {ctaHref && (

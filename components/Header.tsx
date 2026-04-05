@@ -48,6 +48,7 @@ export default function Header() {
       children: [
         { label: tr.nav.technicalTranslation, href: "/services/technical" },
         { label: tr.nav.marketingTranslation, href: "/services/marketing" },
+        { label: tr.nav.proofreadingLocalisation, href: "/services/proofreading-localisation" },
       ],
     },
     { label: tr.nav.about, href: "/about" },

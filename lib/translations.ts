@@ -8,6 +8,7 @@ export const t = {
       contact: "Contact",
       technicalTranslation: "Technical Translation",
       marketingTranslation: "Marketing Translation",
+      proofreadingLocalisation: "Proofreading & Localisation",
       closeMenu: "Close menu",
       openMenu: "Open menu",
     },
@@ -33,7 +34,7 @@ export const t = {
     services: {
       overline: "What I offer",
       heading: "Services",
-      intro: "Technical and marketing translations from German into English — precise, authentic and tailored to your audience.",
+      intro: "Technical and marketing translations from German into English, precise, authentic and tailored to your audience.",
       cta: "All services",
       items: [
         {
@@ -45,20 +46,14 @@ export const t = {
         {
           num: "02",
           title: "Marketing Translation & Transcreation",
-          description: "DE↔EN translation of marketing copy, campaigns, product descriptions and websites. More than word-for-word — tone, intent and cultural nuance are preserved for the target audience.",
+          description: "DE↔EN translation of marketing copy, campaigns, product descriptions and websites. More than word-for-word, tone, intent and cultural nuance are preserved for the target audience.",
           linkLabel: "Learn more",
         },
         {
           num: "03",
-          title: "Proofreading & Editing",
-          description: "Native-level English proofreading of any text, whether translated or originally authored. Grammar, spelling, punctuation and style refined for academic, marketing and corporate contexts.",
-          linkLabel: "Get in touch",
-        },
-        {
-          num: "04",
-          title: "Linguistic Validation & Localisation",
-          description: "Software and app localisation — UI strings, help content and user-facing copy. Content adapted for AU, UK and US English variants, with linguistic validation against the source.",
-          linkLabel: "Get in touch",
+          title: "Proofreading & Localisation",
+          description: "Native-level English proofreading of any text, whether translated or originally authored. Grammar, spelling, punctuation and style refined for academic, marketing and corporate contexts. Also includes localisation between English variants.",
+          linkLabel: "Learn more",
         },
       ],
     },
@@ -66,10 +61,10 @@ export const t = {
     // About component
     about: {
       overline: "About",
-      heading: "A translator who lives\ninside the language.",
+      heading: "A diligent language expert.",
       bio1: "In 2016, my career began as the in-house English translator for a German software company, where I localised the software interface, training documentation, newsletters and blogs for the international market. Since then, I have been a trusted language expert for a range of businesses in the automotive, logistics, retail and industrial engineering sectors.",
       bio2: "I am a qualified and recognised professional, as a member of the Bundesverband für Dolmetschen und Übersetzen (BDÜ, Germany) and the Chartered Institute of Linguists (CIOL, UK). I have passed the Diploma in Translation exam and have a Master of Arts in Linguistics from Freie Universität Berlin.",
-      bio3: "Having lived in Germany since 2013, I understand the cultural nuances and exactly how to localise them for wherever your brand wants to be.",
+      bio3: "",
       cta: "Read more about me",
     },
 
@@ -110,40 +105,8 @@ export const t = {
     faq: {
       items: [
         {
-          q: "What language pairs do you work with?",
-          a: "My primary working language pair is German into English and English into German. I am a native English speaker with near-native German proficiency, and I also hold qualifications in French and Spanish from my MA studies at Freie Universität Berlin.",
-        },
-        {
-          q: "What subject areas do you specialise in?",
-          a: "My core specialisations are technical translation and marketing translation. I have extensive experience in IT, software, industrial manufacturing, automotive, retail and mobility sectors. I also work on academic texts, corporate communications and software localisation.",
-        },
-        {
           q: "Why should I work with you instead of using machine translation and AI?",
-          a: "Technology still has its limits, and if you need the highest level of accuracy, deal with complexity, or have a carefully crafted brand voice, you need a human to ensure accuracy and quality. I can also check machine translations for accuracy and consistency, or do the whole project from scratch. Feel free to reach out with your documents and we can take it from there.",
-        },
-        {
-          q: "What file formats do you accept?",
-          a: "I work with most common formats including Word (.docx), Excel, PowerPoint, PDF (editable and scanned), HTML, XML, XLIFF and plain text. For software localisation I can handle PO files and JSON strings. If you have a different format, feel free to ask.",
-        },
-        {
-          q: "Do you use CAT tools or translation memory?",
-          a: "Yes. I use industry-standard CAT tools including SDL Trados Studio and memoQ. Translation memories and termbases are built and maintained per client, which ensures consistency across projects and can reduce costs on large or repeat volumes.",
-        },
-        {
-          q: "How do you handle confidential documents?",
-          a: "Confidentiality is taken seriously. I am happy to sign NDAs, and all project files are stored securely and deleted from my systems on request after delivery. I do not use AI translation tools that process data on external servers without explicit client consent.",
-        },
-        {
-          q: "What are your rates?",
-          a: "Rates depend on the language pair, subject matter, urgency and volume. I charge per source word for translation and per hour for proofreading and revision. Please get in touch with your project details for a tailored quote — there is no obligation.",
-        },
-        {
-          q: "How quickly can you turn around a project?",
-          a: "Standard turnaround is typically 1,500–2,000 words per working day. Larger or more complex projects are planned with a delivery schedule agreed upfront. Rush delivery is available subject to my current workload — please enquire in advance where possible.",
-        },
-        {
-          q: "Do you offer certified or sworn translations?",
-          a: "I hold the CIOL Diploma in Translation (Level 7, Master's level equivalent), which demonstrates professional qualification. For legally certified or court-sworn translations, please enquire directly, as requirements vary by country and institution.",
+          a: "Sometimes, machine translation is good enough for your requirements. But if you need the highest level of accuracy, deal with complexity, or have a carefully crafted brand voice, you need a human to ensure the level of accuracy and quality required. I can also check machine translations for accuracy and consistency, or do the whole project from scratch. Feel free to reach out with your documents and we can take it from there.",
         },
         {
           q: "I need translations into other languages, not just English.",
@@ -151,11 +114,17 @@ export const t = {
         },
         {
           q: "Can you translate a birth certificate for me?",
-          a: "No, unfortunately I do not offer translations of official documents. Feel free to reach out and I can recommend a colleague who can provide these for you.",
+          a: "No, unfortunately I do not offer translations of official documents. I would be happy to recommend a colleague who can provide these for you.",
+        },
+        {
+          q: "What languages do you work with?",
+          a: "I work into English only, because it is my native language. I have C1/C2-level German (highly advanced), which I have acquired by living in Berlin since 2013 and completing a German-language master's degree program. This is demonstrated by my Diploma in Translation, which I obtained for German into English translations in 2025.",
+          linkText: "Diploma in Translation",
+          linkHref: "https://www.ciol.org.uk/DipTrans",
         },
         {
           q: "Why work with a freelance language professional?",
-          a: "Working together means that we can communicate directly, there is no overhead and back and forth. Your documents will always be translated by me, ensuring consistent terminology, voice and style. I can take care of as much of the process as you need – maybe you already have English texts you need me to check, or you want me to take over the entire process so you don't have to worry about a thing. Let me know what you need.",
+          a: "Working together means that we can communicate directly, there is no overhead and back and forth. Your documents will always be translated by me, ensuring consistent terminology, voice and style. I can take care of as much of the process as you need, maybe you already have English texts you need me to check, or you want me to take over of the entire process so you don't have to worry about a thing. Let me know what you need.",
         },
       ],
     },
@@ -168,7 +137,7 @@ export const t = {
         {
           title: "Diploma in Translation",
           subtitle: "For German-English, technical and social sciences",
-          detail: "Chartered Institute of Linguists (CIOL) — Level 7, Master's level equivalent",
+          detail: "Chartered Institute of Linguists (CIOL), Level 7, Master's level equivalent",
         },
         {
           title: "Master of Arts in Linguistics",
@@ -179,10 +148,6 @@ export const t = {
           title: "BDÜ Member",
           subtitle: "Bundesverband für Dolmetschen und Übersetzen",
         },
-        {
-          title: "CIOL Associate",
-          subtitle: "Chartered Institute of Linguists, UK",
-        },
       ],
     },
 
@@ -191,15 +156,15 @@ export const t = {
       intro: {
         overline: "What I do",
         heading: "Your company's voice, from technical documentation to branding.",
-        p1: "Investing in professional translation ensures your brand sounds authentic, persuasive and resonates with your target audience emotionally.",
+        p1: "Investing in professional language services ensures your brand sounds authentic, persuasive and resonates with your target audience emotionally.",
         p2: "As an expert for technical and marketing translation, I offer a complete solution to help your business go international. For over ten years, I have been helping automotive, retail and IT companies in the DACH region communicate in flawless, fluent English.",
         cta: "View services",
       },
       why: {
         overline: "Why it matters",
         heading: "Your brand speaks through the quality of its language.",
-        p1: "Obvious use of machine translation and AI can undermine your brand's credibility. Even small errors in spelling, grammar or punctuation make content look unprofessional — and the quality of language your company uses directly reflects the quality of the brand.",
-        p2: "Brand terminology, slogans and style guidelines need to be applied consistently across all materials. Everything should read as if it were written in English by a human — because your audience will notice when it isn't.",
+        p1: "Obvious use of machine translation and AI can undermine your brand's credibility. Even small errors in spelling, grammar or punctuation make content look unprofessional, and the quality of language your company uses directly reflects the quality of the brand.",
+        p2: "Brand terminology, slogans and style guidelines need to be applied consistently across all materials. Everything should read as if it were written in English by a human, because your audience will notice when it isn't.",
         cta: "Marketing translation",
       },
       faqTeaser: {
@@ -210,15 +175,15 @@ export const t = {
         items: [
           {
             q: "Why should I work with you instead of using machine translation and AI?",
-            a: "Technology still has its limits. If you need the highest level of accuracy, deal with complexity, or have a carefully crafted brand voice, you need a human to ensure quality. I can also check machine translations for accuracy and consistency, or take on the whole project from scratch.",
+            a: "Sometimes, machine translation is good enough for your requirements. But if you need the highest level of accuracy, deal with complexity, or have a carefully crafted brand voice, you need a human to ensure quality. I can also check machine translations for accuracy and consistency, or take on the whole project from scratch.",
           },
           {
-            q: "What language pairs do you work with?",
-            a: "My primary working language pair is German into English and English into German. I am a native English speaker with near-native German proficiency.",
+            q: "What languages do you work with?",
+            a: "I work into English only, because it is my native language. I have C1/C2-level German (highly advanced), which I have acquired by living in Berlin since 2013 and completing a German-language master's degree program.",
           },
           {
             q: "Why work with a freelance language professional?",
-            a: "Working together means we can communicate directly — no overhead, no back and forth. Your documents will always be translated by me, ensuring consistent terminology, voice and style.",
+            a: "Working together means we can communicate directly, no overhead, no back and forth. Your documents will always be translated by me, ensuring consistent terminology, voice and style.",
           },
         ],
       },
@@ -246,15 +211,9 @@ export const t = {
         },
         {
           num: "03",
-          title: "Proofreading & Editing",
-          description: "Native-level English proofreading of any text, whether translated or originally authored. Grammar, spelling, punctuation and style refined for academic, marketing and corporate contexts.",
-          linkLabel: "Get in touch",
-        },
-        {
-          num: "04",
-          title: "Linguistic Validation & Localisation",
-          description: "Software and app localisation — UI strings, help content and user-facing copy. Content adapted for AU, UK and US English variants, with linguistic validation against the source.",
-          linkLabel: "Get in touch",
+          title: "Proofreading & Localisation",
+          description: "Native-level English proofreading of any text, whether translated or originally authored. Grammar, spelling, punctuation and style refined for academic, marketing and corporate contexts. Also includes localisation between English variants.",
+          linkLabel: "Explore",
         },
       ],
     },
@@ -262,7 +221,7 @@ export const t = {
     // About page hero
     aboutPage: {
       overline: "About me",
-      title: "A translator who lives inside the language.",
+      title: "A diligent language expert.",
       subtitle: "Ten years helping businesses in the DACH region communicate in flawless English.",
     },
 
@@ -290,14 +249,14 @@ export const t = {
       title: "Precision in every word.",
       subtitle: "From manuals to software documentation, accuracy is non-negotiable.",
       intro1: "Technical translation requires the highest level of precision, accuracy and consistency. To achieve this, you need to work with an experienced and qualified professional who knows how your product works.",
-      intro2: "From the intricacies of the smallest inner parts that make taps work to the intelligent software that helps you park your car: I understand and delight in this backstage access to the world around me.",
+      intro2: "From the intricacies of the smallest inner parts that make taps work to the intelligent software that helps you park your car: I understand and delight in this backstage access to the world around me. Mistakes in technical translations can be costly, causing reputational risks, serious injuries, product malfunctions and customer dissatisfaction. Avoid this by working with an experienced expert linguist with a deep understanding of your company and its requirements.",
       fieldsOverline: "Specialisations",
       fieldsHeading: "Fields I work in",
       fields: ["Automotive", "IT", "Industrial manufacturing", "Construction and plumbing"],
       terminologyOverline: "Consistency",
       terminologyHeading: "Terminology management",
       terminology1: "Good technical translations must use accurate and specific terminology. Consistent use of specialised terms keeps documentation clear and precise.",
-      terminology2: "I work with glossaries, terminology databases and style guides to make sure that key terms are translated consistently across documents, updates and product versions.",
+      terminology2: "I work with glossaries, terminology databases and style guides to make sure that key terms are translated consistently across documents, updates and product versions. I can also help your company develop and manage these assets.",
       documentsOverline: "What I translate",
       documentsHeading: "Documents",
       documents: [
@@ -314,8 +273,8 @@ export const t = {
       andMore: "and more",
       relatedOverline: "Related services",
       relatedMarketing: "Marketing Translation & Transcreation",
-      relatedMarketingDesc: "Campaigns, product pages and brand copy — adapted for English-speaking audiences.",
-      relatedProofreading: "Proofreading & Editing",
+      relatedMarketingDesc: "Campaigns, product pages and brand copy, adapted for English-speaking audiences.",
+      relatedProofreading: "Proofreading & Localisation",
       relatedProofreadingDesc: "Native-level review of translated or originally authored English content.",
       learnMore: "Learn more",
       getInTouch: "Get in touch",
@@ -329,15 +288,15 @@ export const t = {
       overline: "Marketing Translation",
       title: "Your brand, in their language.",
       subtitle: "Authentic, persuasive and culturally resonant.",
-      intro1: "Companies devote so much time, money and resources to marketing, but then translation is an afterthought. Nowadays, users want high-quality content that is a pleasure to read, so it is worth investing in professional translation services.",
-      intro2: "As an experienced linguist and language lead, I recognise your brand's voice and adapt it into English: whether you want to localise your business for the US or the UK specifically, or offer an international version of your website in English to reach more customers.",
+      intro1: "Companies put a lot of thought into marketing materials and campaigns, so a lot of thought should also go into the translations. As an experienced linguist and language lead, I recognise your brand's voice and adapt it into English, whether you want to localise your business for the US or the UK specifically, or offer an international version of your website in English to reach more customers.",
+      intro2: "",
       whyOverline: "Why it matters",
-      whyHeading: "Why professional translation?",
-      why1: "In marketing translations in particular, machine translation can fall short. Obvious use of machine translation and AI can undermine your brand's credibility, as can rushed and unprofessional translations, because the quality of language your company uses directly reflects the quality of the brand.",
-      why2: "Even small errors in spelling, grammar or punctuation can make content look unprofessional and damage credibility. Brand terminology, slogans and style guidelines need to be applied consistently across all materials, and everything should read as if it were written in English by a human.",
+      whyHeading: "The human touch",
+      why1: "Machine translation often falls short, especially when it comes to marketing translation. Obvious use of AI and free online translation tools and rushed or unprofessional translations undermine a brand's credibility, because the quality of a company's communication reflects on the quality of the brand. Even small errors in spelling, grammar or punctuation can make content look unprofessional and damage credibility.",
+      why2: "Brand terminology, slogans and style guidelines need to be applied consistently across all materials, and everything should read as if it were originally written in English by a human.",
       workingOverline: "Working with me",
       workingHeading: "A consistent voice across all assets",
-      workingDesc: "Maintain a consistent voice across all your marketing assets that reflects the German version while adapting to the needs and expectations of the target audience.",
+      workingDesc: "Maintain a consistent voice across all your marketing assets that reflects the German version while adapting to the needs and expectations of the target audience. Make sure your brand stands out with unique, creative copy.",
       examplesOverline: "Examples",
       examplesHeading: "What I translate",
       examples: [
@@ -354,9 +313,9 @@ export const t = {
       andMore: "and more",
       strategyOverline: "Strategy",
       strategyHeading: "Who is your target audience?",
-      strategyDesc: "English is spoken across the world, so translating into English can open up many markets. It is important to understand who your English-speaking customers are: do you want an international version of your website, or are you targeting the UK or US specifically? Perhaps even Australia or New Zealand? Getting this right from the start ensures your content connects with readers in the most familiar language.",
+      strategyDesc: "English is spoken across the world, so translating into English can open up many markets. It is important to understand who your English-speaking customers are: do you want an international version of your website, or are you targeting the UK or US specifically? Perhaps even Australia or New Zealand?",
       serviceTypesOverline: "What I offer",
-      serviceTypesHeading: "Services for marketing content",
+      serviceTypesHeading: "What is transcreation?",
       serviceTypes: [
         {
           title: "Translation",
@@ -364,7 +323,7 @@ export const t = {
         },
         {
           title: "Transcreation",
-          description: "A creative translation where the source is taken as inspiration and recreated to ensure it resonates with the target audience. The perfect choice for campaigns that need to have an emotional effect. Cultural references, rhymes, plays on words and humour require cultural understanding and a firm grasp of who the target audience is.",
+          description: "Transcreation is a creative translation where the source is taken as inspiration and recreated to ensure it resonates with the target audience. It is a great choice for marketing campaigns that need to have an emotional effect and capture the reader. Cultural references, rhymes, plays on words and humour require cultural understanding and a firm grasp of who the target audience is. By merging the processes of copywriting and translation, truly authentic texts emerge that will engage and enthral the reader.",
         },
         {
           title: "SEO Translation",
@@ -372,17 +331,58 @@ export const t = {
         },
         {
           title: "Localisation",
-          description: "Adapting content for regional language and cultural norms — different spelling variants, vocabulary, grammar, tone, cultural references, regulatory frameworks and more. Every region is different, and localisation ensures credibility by allowing content to connect with readers in the most familiar language.",
+          description: "Adapting content for regional language and cultural norms, different spelling variants, vocabulary, grammar, tone, cultural references, regulatory frameworks and more. Every region is different, and localisation ensures credibility by allowing content to connect with readers in the most familiar language.",
         },
       ],
       relatedOverline: "Related services",
       relatedTechnical: "Technical Translation",
-      relatedTechnicalDesc: "Manuals, datasheets and software documentation — precise and consistent.",
-      relatedProofreading: "Proofreading & Editing",
+      relatedTechnicalDesc: "Manuals, datasheets and software documentation, precise and consistent.",
+      relatedProofreading: "Proofreading & Localisation",
       relatedProofreadingDesc: "Native-level review of translated or originally authored English content.",
       learnMore: "Learn more",
       getInTouch: "Get in touch",
       ctaText: "Ready to discuss your marketing translation project?",
+    },
+
+    // Proofreading & Localisation page
+    proofreadingPage: {
+      breadcrumbServices: "Services",
+      breadcrumbCurrent: "Proofreading & Localisation",
+      overline: "Proofreading & Localisation",
+      title: "The final eyes.",
+      subtitle: "Do you already have text in English but it needs improving, an expert eye, consultation?",
+      proofreadingOverline: "Proofreading & Revision",
+      proofreadingHeading: "The final eyes",
+      proofreadingDesc1: "Having your text professionally checked before sending it out to customers, publishing it on your website or submitting it for grading can offer great peace of mind. I am an avid reader and an avid proofreader, I've read all my friends' theses, as well as a breadth of documents for publications, corporations and organisations. And many novels, too.",
+      proofreadingListOverline: "What I proofread",
+      proofreadingList: [
+        "Academic texts",
+        "Corporate communication",
+        "Press releases",
+        "Website copy and blog posts",
+        "Entire books",
+      ],
+      localisationOverline: "Localisation",
+      localisationHeading: "There are so many different versions of English",
+      localisationDesc: "Adapting content for regional language and cultural norms. This could mean different variants in spelling, vocabulary, grammar, tone, and cultural references. It could be different regulatory frameworks, workplace norms, currencies, procedures, every region is different, and localisation ensures credibility by allowing marketing content to connect with readers. Make sure your selling points hit home by using relevant examples in a familiar context.",
+      localisationListOverline: "What I localise",
+      localisationList: [
+        "Software interfaces",
+        "Marketing copy, websites and campaigns",
+      ],
+      localisationForOverline: "Where I localise for",
+      localisationFor: [
+        "Between American and British English",
+        "Into Australian English",
+      ],
+      relatedOverline: "Related services",
+      relatedTechnical: "Technical Translation",
+      relatedTechnicalDesc: "Manuals, datasheets and software documentation, precise and consistent.",
+      relatedMarketing: "Marketing Translation & Transcreation",
+      relatedMarketingDesc: "Campaigns, product pages and brand copy, adapted for English-speaking audiences.",
+      learnMore: "Learn more",
+      getInTouch: "Get in touch",
+      ctaText: "Ready to discuss your project?",
     },
   },
 
@@ -395,6 +395,7 @@ export const t = {
       contact: "Kontakt",
       technicalTranslation: "Fachübersetzung",
       marketingTranslation: "Marketingübersetzung",
+      proofreadingLocalisation: "Lektorat & Lokalisierung",
       closeMenu: "Menü schließen",
       openMenu: "Menü öffnen",
     },
@@ -420,7 +421,7 @@ export const t = {
     services: {
       overline: "Mein Angebot",
       heading: "Leistungen",
-      intro: "Fach- und Marketingübersetzungen aus dem Deutschen ins Englische — präzise, authentisch und zielgruppengerecht.",
+      intro: "Fach- und Marketingübersetzungen aus dem Deutschen ins Englische, präzise, authentisch und zielgruppengerecht.",
       cta: "Alle Leistungen",
       items: [
         {
@@ -432,20 +433,14 @@ export const t = {
         {
           num: "02",
           title: "Marketingübersetzung & Transkreation",
-          description: "DE↔EN-Übersetzung von Marketingtexten, Kampagnen, Produktbeschreibungen und Websites. Mehr als wörtliche Übersetzung — Ton, Intention und kulturelle Nuancen werden für die Zielgruppe bewahrt.",
+          description: "DE↔EN-Übersetzung von Marketingtexten, Kampagnen, Produktbeschreibungen und Websites. Mehr als wörtliche Übersetzung, Ton, Intention und kulturelle Nuancen werden für die Zielgruppe bewahrt.",
           linkLabel: "Mehr erfahren",
         },
         {
           num: "03",
-          title: "Lektorat & Korrekturlesen",
-          description: "Lektorat auf muttersprachlichem Niveau für jeden Text, ob übersetzt oder ursprünglich auf Englisch verfasst. Grammatik, Rechtschreibung, Zeichensetzung und Stil für akademische, Marketing- und Unternehmenskontexte.",
-          linkLabel: "Kontakt aufnehmen",
-        },
-        {
-          num: "04",
-          title: "Linguistische Validierung & Lokalisierung",
-          description: "Software- und App-Lokalisierung — UI-Strings, Hilfeinhalte und nutzerseitige Texte. Inhalte werden für australisches, britisches und amerikanisches Englisch angepasst, mit linguistischer Validierung gegenüber der Quelle.",
-          linkLabel: "Kontakt aufnehmen",
+          title: "Lektorat & Lokalisierung",
+          description: "Lektorat auf muttersprachlichem Niveau für jeden Text, ob übersetzt oder ursprünglich auf Englisch verfasst. Grammatik, Rechtschreibung, Zeichensetzung und Stil für akademische, Marketing- und Unternehmenskontexte. Beinhaltet auch Lokalisierung zwischen englischen Varianten.",
+          linkLabel: "Mehr erfahren",
         },
       ],
     },
@@ -453,10 +448,10 @@ export const t = {
     // About component
     about: {
       overline: "Über mich",
-      heading: "Eine Übersetzerin,\ndie in der Sprache lebt.",
+      heading: "Eine gewissenhafte Sprachexpertin.",
       bio1: "Im Jahr 2016 begann meine Karriere als interne Englischübersetzerin eines deutschen Softwareunternehmens, wo ich die Softwareoberfläche, Schulungsunterlagen, Newsletter und Blogs für den internationalen Markt lokalisierte. Seitdem bin ich eine vertrauenswürdige Sprachexpertin für Unternehmen aus den Bereichen Automotive, Logistik, Handel und Maschinenbau.",
       bio2: "Ich bin eine qualifizierte und anerkannte Fachkraft als Mitglied des Bundesverbands für Dolmetschen und Übersetzen (BDÜ, Deutschland) und des Chartered Institute of Linguists (CIOL, UK). Ich habe das Diploma in Translation bestanden und verfüge über einen Master of Arts in Linguistik der Freien Universität Berlin.",
-      bio3: "Da ich seit 2013 in Deutschland lebe, verstehe ich die kulturellen Nuancen und weiß genau, wie ich sie für den Markt Ihrer Wahl lokalisieren kann.",
+      bio3: "",
       cta: "Mehr über mich erfahren",
     },
 
@@ -497,52 +492,26 @@ export const t = {
     faq: {
       items: [
         {
-          q: "Mit welchen Sprachkombinationen arbeiten Sie?",
-          a: "Meine primäre Sprachkombination ist Deutsch nach Englisch und Englisch nach Deutsch. Ich bin englische Muttersprachlerin mit nahezu muttersprachlichen Deutschkenntnissen und verfüge außerdem über Qualifikationen in Französisch und Spanisch aus meinem Masterstudium an der Freien Universität Berlin.",
-        },
-        {
-          q: "Auf welche Fachgebiete sind Sie spezialisiert?",
-          a: "Meine Kernspezialisierungen sind Fachübersetzung und Marketingübersetzung. Ich verfüge über umfangreiche Erfahrung in den Bereichen IT, Software, Maschinenbau, Automotive, Handel und Mobilität sowie in akademischen Texten, Unternehmenskommunikation und Softwarelokalisierung.",
-        },
-        {
           q: "Warum sollte ich mit Ihnen arbeiten und nicht einfach maschinelle Übersetzung oder KI nutzen?",
-          a: "Technologie hat nach wie vor ihre Grenzen. Wenn Sie höchste Genauigkeit benötigen, mit Komplexität umgehen oder eine sorgfältig entwickelte Markenstimme bewahren möchten, brauchen Sie einen Menschen, der Qualität sicherstellt. Ich kann auch maschinelle Übersetzungen auf Richtigkeit und Konsistenz prüfen oder das gesamte Projekt von Grund auf übernehmen. Senden Sie mir gerne Ihre Dokumente, dann besprechen wir das Weitere.",
-        },
-        {
-          q: "Welche Dateiformate akzeptieren Sie?",
-          a: "Ich arbeite mit den gängigsten Formaten: Word (.docx), Excel, PowerPoint, PDF (bearbeitbar und gescannt), HTML, XML, XLIFF und reiner Text. Für die Softwarelokalisierung kann ich auch PO-Dateien und JSON-Strings verarbeiten. Bei anderen Formaten fragen Sie gerne nach.",
-        },
-        {
-          q: "Nutzen Sie CAT-Tools oder Translation-Memory-Systeme?",
-          a: "Ja. Ich verwende branchenübliche CAT-Tools wie SDL Trados Studio und memoQ. Translation-Memories und Terminologiedatenbanken werden kundenspezifisch aufgebaut und gepflegt, was projektübergreifende Konsistenz sicherstellt und bei großen oder wiederkehrenden Volumen Kosten senken kann.",
-        },
-        {
-          q: "Wie gehen Sie mit vertraulichen Dokumenten um?",
-          a: "Vertraulichkeit wird bei mir ernst genommen. Ich unterzeichne gerne NDAs, alle Projektdateien werden sicher gespeichert und auf Wunsch nach Lieferung von meinen Systemen gelöscht. Ich verwende keine KI-Übersetzungstools, die Daten ohne ausdrückliche Zustimmung des Kunden auf externen Servern verarbeiten.",
-        },
-        {
-          q: "Was sind Ihre Honorare?",
-          a: "Die Honorare hängen vom Sprachpaar, Fachgebiet, Dringlichkeit und Umfang ab. Für Übersetzungen berechne ich pro Quellwort, für Lektorat und Überarbeitung nach Stunden. Bitte kontaktieren Sie mich mit Ihren Projektdetails für ein individuelles Angebot — unverbindlich.",
-        },
-        {
-          q: "Wie schnell können Sie ein Projekt fertigstellen?",
-          a: "Die Standard-Lieferzeit beträgt in der Regel 1.500–2.000 Wörter pro Arbeitstag. Bei größeren oder komplexeren Projekten wird ein Lieferplan vorab vereinbart. Eillieferungen sind je nach aktueller Auslastung möglich — bitte fragen Sie möglichst frühzeitig an.",
-        },
-        {
-          q: "Bieten Sie beglaubigte oder beeidigte Übersetzungen an?",
-          a: "Ich besitze das CIOL Diploma in Translation (Level 7, Masteräquivalent), das meine fachliche Qualifikation belegt. Für gesetzlich beglaubigte oder gerichtlich beeidigte Übersetzungen fragen Sie bitte direkt an, da die Anforderungen je nach Land und Institution variieren.",
+          a: "Manchmal ist maschinelle Übersetzung für Ihre Zwecke ausreichend. Wenn Sie jedoch höchste Genauigkeit benötigen, mit Komplexität umgehen oder eine sorgfältig entwickelte Markenstimme bewahren möchten, brauchen Sie einen Menschen, der die erforderliche Qualität sicherstellt. Ich kann auch maschinelle Übersetzungen auf Richtigkeit und Konsistenz prüfen oder das gesamte Projekt von Grund auf übernehmen. Senden Sie mir gerne Ihre Dokumente, dann besprechen wir das Weitere.",
         },
         {
           q: "Ich benötige Übersetzungen in andere Sprachen, nicht nur ins Englische.",
-          a: "Ich biete zwar ausschließlich Übersetzungen aus dem Deutschen ins Englische an, verfüge jedoch über ein umfangreiches Netzwerk talentierter Kolleginnen und Kollegen. Es ist daher möglich, auch andere Sprachkombinationen anzubieten. Senden Sie mir gerne die Projektdetails — wir finden gemeinsam eine Lösung.",
+          a: "Ich biete zwar ausschließlich Übersetzungen aus dem Deutschen ins Englische an, verfüge jedoch über ein umfangreiches Netzwerk talentierter Kolleginnen und Kollegen. Es ist daher möglich, auch andere Sprachkombinationen anzubieten. Senden Sie mir gerne die Projektdetails, wir finden gemeinsam eine Lösung.",
         },
         {
           q: "Können Sie mir eine Geburtsurkunde übersetzen?",
-          a: "Nein, leider biete ich keine Übersetzungen von Personenstandsurkunden an. Gerne empfehle ich Ihnen eine Kollegin oder einen Kollegen, die bzw. der diese Leistung erbringen kann.",
+          a: "Nein, leider biete ich keine Übersetzungen von Personenstandsurkunden an. Ich empfehle Ihnen jedoch gerne eine Kollegin oder einen Kollegen, die bzw. der diese Leistung erbringen kann.",
+        },
+        {
+          q: "Mit welchen Sprachen arbeiten Sie?",
+          a: "Ich übersetze ausschließlich ins Englische, da es meine Muttersprache ist. Ich verfüge über Deutschkenntnisse auf C1/C2-Niveau (hochgradig fortgeschritten), die ich durch meinen Aufenthalt in Berlin seit 2013 und den Abschluss eines deutschsprachigen Masterstudiengangs erworben habe. Dies belegt mein Diploma in Translation, das ich 2025 für Übersetzungen aus dem Deutschen ins Englische erworben habe.",
+          linkText: "Diploma in Translation",
+          linkHref: "https://www.ciol.org.uk/DipTrans",
         },
         {
           q: "Warum mit einem freiberuflichen Sprachprofi zusammenarbeiten?",
-          a: "Die Zusammenarbeit bedeutet direkte Kommunikation ohne Umwege und Overhead. Ihre Dokumente werden immer von mir übersetzt, was konsistente Terminologie, Stil und Ton gewährleistet. Ich kann so viel des Prozesses übernehmen, wie Sie benötigen — ob Sie bereits englische Texte zum Prüfen haben oder den gesamten Prozess abgeben möchten, damit Sie sich um nichts kümmern müssen. Sagen Sie mir einfach, was Sie brauchen.",
+          a: "Die Zusammenarbeit bedeutet direkte Kommunikation ohne Umwege und Overhead. Ihre Dokumente werden immer von mir übersetzt, was konsistente Terminologie, Stil und Ton gewährleistet. Ich kann so viel des Prozesses übernehmen, wie Sie benötigen, ob Sie bereits englische Texte zum Prüfen haben oder den gesamten Prozess abgeben möchten, damit Sie sich um nichts kümmern müssen. Sagen Sie mir einfach, was Sie brauchen.",
         },
       ],
     },
@@ -555,7 +524,7 @@ export const t = {
         {
           title: "Diploma in Translation",
           subtitle: "Für Deutsch-Englisch, Fach- und Sozialwissenschaften",
-          detail: "Chartered Institute of Linguists (CIOL) — Level 7, Äquivalent zum Masterabschluss",
+          detail: "Chartered Institute of Linguists (CIOL), Level 7, Äquivalent zum Masterabschluss",
         },
         {
           title: "Master of Arts in Linguistik",
@@ -566,10 +535,6 @@ export const t = {
           title: "BDÜ-Mitglied",
           subtitle: "Bundesverband für Dolmetschen und Übersetzen",
         },
-        {
-          title: "CIOL Associate",
-          subtitle: "Chartered Institute of Linguists, UK",
-        },
       ],
     },
 
@@ -577,16 +542,16 @@ export const t = {
     home: {
       intro: {
         overline: "Was ich tue",
-        heading: "Die Stimme Ihres Unternehmens — von technischer Dokumentation bis zum Branding.",
-        p1: "Investitionen in professionelle Übersetzung stellen sicher, dass Ihre Marke authentisch und überzeugend klingt und Ihre Zielgruppe emotional anspricht.",
+        heading: "Die Stimme Ihres Unternehmens, von technischer Dokumentation bis zum Branding.",
+        p1: "Investitionen in professionelle Sprachdienstleistungen stellen sicher, dass Ihre Marke authentisch und überzeugend klingt und Ihre Zielgruppe emotional anspricht.",
         p2: "Als Expertin für Fach- und Marketingübersetzung biete ich eine Komplettlösung, um Ihr Unternehmen international zu positionieren. Seit über zehn Jahren helfe ich Unternehmen aus der Automobil-, Handels- und IT-Branche in der DACH-Region, auf einwandfreiem, fließendem Englisch zu kommunizieren.",
         cta: "Leistungen ansehen",
       },
       why: {
         overline: "Warum es wichtig ist",
         heading: "Ihre Marke spricht durch die Qualität ihrer Sprache.",
-        p1: "Der offensichtliche Einsatz von maschineller Übersetzung und KI kann die Glaubwürdigkeit Ihrer Marke untergraben. Selbst kleine Fehler in Rechtschreibung, Grammatik oder Zeichensetzung lassen Inhalte unprofessionell wirken — und die sprachliche Qualität Ihres Unternehmens spiegelt direkt die Qualität der Marke wider.",
-        p2: "Markenterminologie, Slogans und Stilrichtlinien müssen in allen Materialien konsistent angewendet werden. Alles sollte so klingen, als wäre es auf Englisch von einem Menschen geschrieben worden — denn Ihre Zielgruppe merkt, wenn das nicht der Fall ist.",
+        p1: "Der offensichtliche Einsatz von maschineller Übersetzung und KI kann die Glaubwürdigkeit Ihrer Marke untergraben. Selbst kleine Fehler in Rechtschreibung, Grammatik oder Zeichensetzung lassen Inhalte unprofessionell wirken, und die sprachliche Qualität Ihres Unternehmens spiegelt direkt die Qualität der Marke wider.",
+        p2: "Markenterminologie, Slogans und Stilrichtlinien müssen in allen Materialien konsistent angewendet werden. Alles sollte so klingen, als wäre es auf Englisch von einem Menschen geschrieben worden, denn Ihre Zielgruppe merkt, wenn das nicht der Fall ist.",
         cta: "Marketingübersetzung",
       },
       faqTeaser: {
@@ -597,11 +562,11 @@ export const t = {
         items: [
           {
             q: "Warum sollte ich mit Ihnen arbeiten statt maschinelle Übersetzung oder KI zu nutzen?",
-            a: "Technologie hat nach wie vor ihre Grenzen. Wenn Sie höchste Genauigkeit benötigen, mit Komplexität umgehen oder eine sorgfältig entwickelte Markenstimme bewahren möchten, brauchen Sie einen Menschen. Ich kann auch maschinelle Übersetzungen prüfen oder das gesamte Projekt übernehmen.",
+            a: "Manchmal ist maschinelle Übersetzung für Ihre Zwecke ausreichend. Wenn Sie jedoch höchste Genauigkeit benötigen oder eine sorgfältig entwickelte Markenstimme bewahren möchten, brauchen Sie einen Menschen. Ich kann auch maschinelle Übersetzungen prüfen oder das gesamte Projekt übernehmen.",
           },
           {
-            q: "Mit welchen Sprachkombinationen arbeiten Sie?",
-            a: "Meine primäre Sprachkombination ist Deutsch nach Englisch und Englisch nach Deutsch. Ich bin englische Muttersprachlerin mit nahezu muttersprachlichen Deutschkenntnissen.",
+            q: "Mit welchen Sprachen arbeiten Sie?",
+            a: "Ich übersetze ausschließlich ins Englische, da es meine Muttersprache ist. Ich verfüge über Deutschkenntnisse auf C1/C2-Niveau, erworben durch meinen Aufenthalt in Berlin seit 2013 und einen deutschsprachigen Masterabschluss.",
           },
           {
             q: "Warum mit einem freiberuflichen Sprachprofi zusammenarbeiten?",
@@ -628,20 +593,14 @@ export const t = {
         {
           num: "02",
           title: "Marketingübersetzung & Transkreation",
-          description: "Übersetzung, Transkreation, SEO und Lokalisierung für Kampagnen, Produktseiten, Social Media und mehr. Ihre Markenstimme — bewahrt und für englischsprachige Zielgruppen adaptiert.",
+          description: "Übersetzung, Transkreation, SEO und Lokalisierung für Kampagnen, Produktseiten, Social Media und mehr. Ihre Markenstimme, bewahrt und für englischsprachige Zielgruppen adaptiert.",
           linkLabel: "Entdecken",
         },
         {
           num: "03",
-          title: "Lektorat & Korrekturlesen",
-          description: "Lektorat auf muttersprachlichem Niveau für jeden Text. Grammatik, Rechtschreibung, Zeichensetzung und Stil für akademische, Marketing- und Unternehmenskontexte.",
-          linkLabel: "Kontakt aufnehmen",
-        },
-        {
-          num: "04",
-          title: "Linguistische Validierung & Lokalisierung",
-          description: "Software- und App-Lokalisierung — UI-Strings, Hilfeinhalte und nutzerseitige Texte. Inhalte werden für australisches, britisches und amerikanisches Englisch angepasst.",
-          linkLabel: "Kontakt aufnehmen",
+          title: "Lektorat & Lokalisierung",
+          description: "Lektorat auf muttersprachlichem Niveau für jeden Text. Grammatik, Rechtschreibung, Zeichensetzung und Stil für akademische, Marketing- und Unternehmenskontexte. Beinhaltet auch Lokalisierung zwischen englischen Varianten.",
+          linkLabel: "Entdecken",
         },
       ],
     },
@@ -649,7 +608,7 @@ export const t = {
     // About page hero
     aboutPage: {
       overline: "Über mich",
-      title: "Eine Übersetzerin, die in der Sprache lebt.",
+      title: "Eine gewissenhafte Sprachexpertin.",
       subtitle: "Zehn Jahre lang habe ich Unternehmen in der DACH-Region geholfen, auf einwandfreiem Englisch zu kommunizieren.",
     },
 
@@ -684,7 +643,7 @@ export const t = {
       terminologyOverline: "Konsistenz",
       terminologyHeading: "Terminologiemanagement",
       terminology1: "Gute Fachübersetzungen erfordern präzise und spezifische Terminologie. Der konsistente Einsatz von Fachbegriffen hält Dokumentationen klar und eindeutig.",
-      terminology2: "Ich arbeite mit Glossaren, Terminologiedatenbanken und Styleguides, um sicherzustellen, dass Schlüsselbegriffe über Dokumente, Updates und Produktversionen hinweg konsistent übersetzt werden.",
+      terminology2: "Ich arbeite mit Glossaren, Terminologiedatenbanken und Styleguides, um sicherzustellen, dass Schlüsselbegriffe über Dokumente, Updates und Produktversionen hinweg konsistent übersetzt werden. Ich kann Ihrem Unternehmen auch bei der Entwicklung und Verwaltung dieser Ressourcen helfen.",
       documentsOverline: "Was ich übersetze",
       documentsHeading: "Dokumente",
       documents: [
@@ -701,8 +660,8 @@ export const t = {
       andMore: "und mehr",
       relatedOverline: "Verwandte Leistungen",
       relatedMarketing: "Marketingübersetzung & Transkreation",
-      relatedMarketingDesc: "Kampagnen, Produktseiten und Markentexte — für englischsprachige Zielgruppen adaptiert.",
-      relatedProofreading: "Lektorat & Korrekturlesen",
+      relatedMarketingDesc: "Kampagnen, Produktseiten und Markentexte, für englischsprachige Zielgruppen adaptiert.",
+      relatedProofreading: "Lektorat & Lokalisierung",
       relatedProofreadingDesc: "Lektorat auf muttersprachlichem Niveau für übersetzte oder original auf Englisch verfasste Inhalte.",
       learnMore: "Mehr erfahren",
       getInTouch: "Kontakt aufnehmen",
@@ -716,15 +675,15 @@ export const t = {
       overline: "Marketingübersetzung",
       title: "Ihre Marke, in deren Sprache.",
       subtitle: "Authentisch, überzeugend und kulturell resonant.",
-      intro1: "Unternehmen investieren viel Zeit, Geld und Ressourcen in Marketing — und behandeln die Übersetzung dann als Nachgedanken. Nutzer erwarten heute hochwertige Inhalte, die Freude beim Lesen bereiten. Es lohnt sich, in professionelle Übersetzungsdienstleistungen zu investieren.",
-      intro2: "Als erfahrene Sprachwissenschaftlerin und Language Lead erkenne ich die Stimme Ihrer Marke und übersetze sie ins Englische — ob Sie Ihr Unternehmen gezielt für den US- oder UK-Markt lokalisieren oder eine internationale englische Version Ihrer Website anbieten möchten.",
+      intro1: "Unternehmen investieren viel Gedanken in Marketingmaterialien und Kampagnen, daher sollte auch viel Gedanken in die Übersetzungen fließen. Als erfahrene Sprachwissenschaftlerin und Language Lead erkenne ich die Stimme Ihrer Marke und übersetze sie ins Englische, ob Sie Ihr Unternehmen gezielt für den US- oder UK-Markt lokalisieren oder eine internationale englische Version Ihrer Website anbieten möchten.",
+      intro2: "",
       whyOverline: "Warum es wichtig ist",
-      whyHeading: "Warum professionelle Übersetzung?",
-      why1: "Gerade bei Marketingübersetzungen stößt maschinelle Übersetzung schnell an ihre Grenzen. Der offensichtliche Einsatz von KI und maschineller Übersetzung kann die Glaubwürdigkeit Ihrer Marke untergraben — ebenso wie hastige oder unprofessionelle Übersetzungen, denn die sprachliche Qualität spiegelt direkt die Qualität der Marke wider.",
-      why2: "Selbst kleine Fehler in Rechtschreibung, Grammatik oder Zeichensetzung können Inhalte unprofessionell wirken lassen und die Glaubwürdigkeit schädigen. Markenterminologie, Slogans und Stilrichtlinien müssen in allen Materialien konsistent angewendet werden, und alles sollte klingen, als wäre es von einem Menschen auf Englisch geschrieben worden.",
+      whyHeading: "Die menschliche Note",
+      why1: "Maschinelle Übersetzung stößt oft an ihre Grenzen, besonders bei Marketingübersetzungen. Der offensichtliche Einsatz von KI und kostenlosen Online-Übersetzungstools sowie hastige oder unprofessionelle Übersetzungen untergraben die Glaubwürdigkeit einer Marke, denn die Qualität der Unternehmenskommunikation spiegelt die Qualität der Marke wider. Selbst kleine Fehler in Rechtschreibung, Grammatik oder Zeichensetzung können Inhalte unprofessionell wirken lassen.",
+      why2: "Markenterminologie, Slogans und Stilrichtlinien müssen in allen Materialien konsistent angewendet werden, und alles sollte klingen, als wäre es ursprünglich von einem Menschen auf Englisch verfasst worden.",
       workingOverline: "Zusammenarbeit",
       workingHeading: "Eine konsistente Stimme über alle Assets",
-      workingDesc: "Eine konsistente Stimme über alle Ihre Marketingmaterialien hinweg — die die deutsche Version widerspiegelt und gleichzeitig den Bedürfnissen und Erwartungen der Zielgruppe entspricht.",
+      workingDesc: "Eine konsistente Stimme über alle Ihre Marketingmaterialien hinweg, die die deutsche Version widerspiegelt und gleichzeitig den Bedürfnissen und Erwartungen der Zielgruppe entspricht. Heben Sie Ihre Marke mit einzigartigen, kreativen Texten hervor.",
       examplesOverline: "Beispiele",
       examplesHeading: "Was ich übersetze",
       examples: [
@@ -741,9 +700,9 @@ export const t = {
       andMore: "und mehr",
       strategyOverline: "Strategie",
       strategyHeading: "Wer ist Ihre Zielgruppe?",
-      strategyDesc: "Englisch wird weltweit gesprochen — Übersetzungen ins Englische öffnen viele Märkte. Es ist wichtig zu verstehen, wer Ihre englischsprachigen Kunden sind: Möchten Sie eine internationale Version Ihrer Website, oder sprechen Sie gezielt den UK- oder US-Markt an? Vielleicht sogar Australien oder Neuseeland? Die richtige Ausrichtung von Anfang an sorgt dafür, dass Ihre Inhalte die Leser in der vertrautesten Sprache erreichen.",
+      strategyDesc: "Englisch wird weltweit gesprochen, Übersetzungen ins Englische öffnen viele Märkte. Es ist wichtig zu verstehen, wer Ihre englischsprachigen Kunden sind: Möchten Sie eine internationale Version Ihrer Website, oder sprechen Sie gezielt den UK- oder US-Markt an? Vielleicht sogar Australien oder Neuseeland?",
       serviceTypesOverline: "Mein Angebot",
-      serviceTypesHeading: "Leistungen für Marketinginhalte",
+      serviceTypesHeading: "Was ist Transkreation?",
       serviceTypes: [
         {
           title: "Übersetzung",
@@ -751,7 +710,7 @@ export const t = {
         },
         {
           title: "Transkreation",
-          description: "Eine kreative Übersetzung, bei der der Ausgangstext als Inspiration dient und so neu gestaltet wird, dass er die Zielgruppe anspricht. Die ideale Wahl für Kampagnen mit emotionaler Wirkung. Kulturelle Referenzen, Reime, Wortspiele und Humor erfordern kulturelles Verständnis und ein genaues Wissen darüber, wer die Zielgruppe ist.",
+          description: "Transkreation ist eine kreative Übersetzung, bei der der Ausgangstext als Inspiration dient und so neu gestaltet wird, dass er die Zielgruppe anspricht. Sie ist eine hervorragende Wahl für Marketingkampagnen, die eine emotionale Wirkung erzielen und den Leser fesseln sollen. Kulturelle Referenzen, Reime, Wortspiele und Humor erfordern kulturelles Verständnis und ein genaues Wissen darüber, wer die Zielgruppe ist. Durch die Verbindung von Texter- und Übersetzungsprozessen entstehen wirklich authentische Texte, die den Leser begeistern.",
         },
         {
           title: "SEO-Übersetzung",
@@ -759,17 +718,58 @@ export const t = {
         },
         {
           title: "Lokalisierung",
-          description: "Anpassung von Inhalten an regionale Sprach- und Kulturstandards — unterschiedliche Schreibweisen, Vokabular, Grammatik, Ton, kulturelle Referenzen, regulatorische Rahmenbedingungen und mehr. Jede Region ist anders, und Lokalisierung sorgt dafür, dass Inhalte Leser in der vertrautesten Sprache ansprechen.",
+          description: "Anpassung von Inhalten an regionale Sprach- und Kulturstandards, unterschiedliche Schreibweisen, Vokabular, Grammatik, Ton, kulturelle Referenzen, regulatorische Rahmenbedingungen und mehr. Jede Region ist anders, und Lokalisierung sorgt dafür, dass Inhalte Leser in der vertrautesten Sprache ansprechen.",
         },
       ],
       relatedOverline: "Verwandte Leistungen",
       relatedTechnical: "Fachübersetzung",
-      relatedTechnicalDesc: "Handbücher, Datenblätter und Softwaredokumentation — präzise und konsistent.",
-      relatedProofreading: "Lektorat & Korrekturlesen",
+      relatedTechnicalDesc: "Handbücher, Datenblätter und Softwaredokumentation, präzise und konsistent.",
+      relatedProofreading: "Lektorat & Lokalisierung",
       relatedProofreadingDesc: "Lektorat auf muttersprachlichem Niveau für übersetzte oder original auf Englisch verfasste Inhalte.",
       learnMore: "Mehr erfahren",
       getInTouch: "Kontakt aufnehmen",
       ctaText: "Bereit, Ihr Marketingübersetzungsprojekt zu besprechen?",
+    },
+
+    // Proofreading & Localisation page
+    proofreadingPage: {
+      breadcrumbServices: "Leistungen",
+      breadcrumbCurrent: "Lektorat & Lokalisierung",
+      overline: "Lektorat & Lokalisierung",
+      title: "Der letzte Blick.",
+      subtitle: "Haben Sie bereits einen englischen Text, der aber verbessert, geprüft oder überarbeitet werden soll?",
+      proofreadingOverline: "Lektorat & Überarbeitung",
+      proofreadingHeading: "Der letzte Blick",
+      proofreadingDesc1: "Wenn Ihr Text professionell geprüft wird, bevor er an Kunden gesendet, auf Ihrer Website veröffentlicht oder eingereicht wird, gibt das ein gutes Gefühl. Ich bin eine begeisterte Leserin und Lektorin, ich habe die Abschlussarbeiten all meiner Freunde gelesen sowie eine Vielzahl von Dokumenten für Publikationen, Unternehmen und Organisationen. Und viele Romane dazu.",
+      proofreadingListOverline: "Was ich lektoriere",
+      proofreadingList: [
+        "Wissenschaftliche Texte",
+        "Unternehmenskommunikation",
+        "Pressemitteilungen",
+        "Website-Texte und Blog-Beiträge",
+        "Ganze Bücher",
+      ],
+      localisationOverline: "Lokalisierung",
+      localisationHeading: "Es gibt so viele verschiedene Versionen des Englischen",
+      localisationDesc: "Anpassung von Inhalten an regionale Sprach- und Kulturstandards. Dies kann unterschiedliche Schreibweisen, Vokabular, Grammatik, Ton und kulturelle Referenzen umfassen. Es können auch unterschiedliche regulatorische Rahmenbedingungen, Arbeitsnormen, Währungen und Abläufe sein, jede Region ist anders, und Lokalisierung stellt sicher, dass Marketinginhalte bei den Lesern ankommen. Stellen Sie sicher, dass Ihre Verkaufsargumente durch relevante Beispiele in einem vertrauten Kontext wirksam sind.",
+      localisationListOverline: "Was ich lokalisiere",
+      localisationList: [
+        "Softwareoberflächen",
+        "Marketingtexte, Websites und Kampagnen",
+      ],
+      localisationForOverline: "Wohin ich lokalisiere",
+      localisationFor: [
+        "Zwischen amerikanischem und britischem Englisch",
+        "Ins australische Englisch",
+      ],
+      relatedOverline: "Verwandte Leistungen",
+      relatedTechnical: "Fachübersetzung",
+      relatedTechnicalDesc: "Handbücher, Datenblätter und Softwaredokumentation, präzise und konsistent.",
+      relatedMarketing: "Marketingübersetzung & Transkreation",
+      relatedMarketingDesc: "Kampagnen, Produktseiten und Markentexte, für englischsprachige Zielgruppen adaptiert.",
+      learnMore: "Mehr erfahren",
+      getInTouch: "Kontakt aufnehmen",
+      ctaText: "Bereit, Ihr Projekt zu besprechen?",
     },
   },
 } as const;

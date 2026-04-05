@@ -113,7 +113,16 @@ export default function MarketingTranslationPage() {
               </h2>
               <div className="w-10 h-px bg-gold mb-8" />
               <p className="font-(family-name:--font-dm-sans) font-light text-charcoal/70 text-base leading-relaxed">
-                {tr.strategyDesc}
+                {tr.strategyDesc.split("Australia").map((part, i, arr) =>
+                  i < arr.length - 1 ? (
+                    <span key={i}>
+                      {part}
+                      <Link href="/services/proofreading-localisation" className="text-gold underline underline-offset-2 hover:text-charcoal transition-colors duration-200">
+                        Australia
+                      </Link>
+                    </span>
+                  ) : part
+                )}
               </p>
             </FadeIn>
           </div>

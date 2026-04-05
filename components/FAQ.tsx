@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "@/context/LanguageContext";
 import { t } from "@/lib/translations";
@@ -41,7 +42,20 @@ export default function FAQ() {
                   }`}
                 >
                   <p className="font-(family-name:--font-dm-sans) font-light text-muted text-base leading-relaxed">
-                    {faq.a}
+                    {"linkText" in faq && faq.linkText && faq.linkHref
+                      ? (() => {
+                          const parts = faq.a.split(faq.linkText);
+                          return (
+                            <>
+                              {parts[0]}
+                              <Link href={faq.linkHref} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2 hover:text-charcoal transition-colors duration-200">
+                                {faq.linkText}
+                              </Link>
+                              {parts[1]}
+                            </>
+                          );
+                        })()
+                      : faq.a}
                   </p>
                 </div>
               </div>

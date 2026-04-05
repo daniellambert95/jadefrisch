@@ -59,10 +59,23 @@ const logos = [
           className="object-contain"
         />
       </a>
+      <a
+        href="https://bdue.de/suche-uebersetzer-dolmetscher/mitglied/15215"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="opacity-75 hover:opacity-100 transition-opacity duration-300"
+        aria-label="BDÜ Mitglied"
+      >
+        <Image
+          src="/Mitgliedslogo_kurz_de.svg"
+          alt="BDÜ Mitglied"
+          width={80}
+          height={40}
+          className="object-contain"
+        />
+      </a>
     </div>
   ),
-  // item 3 — CIOL Associate, no logo
-  null,
 ];
 
 export default function QualificationsTimeline() {
