@@ -41,10 +41,10 @@ export default function Footer() {
         </nav>
 
         <a
-          href="mailto:frisch.jade@gmail.com"
+          href="mailto:info@jadefrisch.com"
           className="font-(family-name:--font-dm-sans) text-[11px] uppercase tracking-[0.15em] text-muted hover:text-gold transition-colors duration-300"
         >
-          frisch.jade@gmail.com
+          info@jadefrisch.com
         </a>
       </div>
       <div className="max-w-6xl mx-auto px-6 md:px-12 mt-6 pt-6 border-t border-charcoal/10 flex flex-col md:flex-row items-center justify-between gap-2">

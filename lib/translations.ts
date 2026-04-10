@@ -40,13 +40,13 @@ export const t = {
         {
           num: "01",
           title: "Technical Translation",
-          description: "Precise DE↔EN translation of manuals, specifications, data sheets, software documentation and engineering content. Specialised across IT, automotive and industrial manufacturing sectors.",
+          description: "Precise DE>EN translation of manuals, specifications, data sheets, software documentation and engineering content for the IT, automotive and industrial manufacturing sectors.",
           linkLabel: "Learn more",
         },
         {
           num: "02",
           title: "Marketing Translation & Transcreation",
-          description: "DE↔EN translation of marketing copy, campaigns, product descriptions and websites. More than word-for-word, tone, intent and cultural nuance are preserved for the target audience.",
+          description: "DE>EN translation of marketing copy, campaigns, product descriptions and websites with tone, intent and cultural nuance preserved for the target audience.",
           linkLabel: "Learn more",
         },
         {
@@ -193,7 +193,7 @@ export const t = {
     servicesPage: {
       overline: "Language services",
       title: "Services",
-      subtitle: "Technical and marketing translations DE↔EN, and more.",
+      subtitle: "Technical and marketing translations DE>EN, and more.",
       readyText: "Ready to discuss your project?",
       ctaLabel: "Get in touch",
       items: [
@@ -314,24 +314,12 @@ export const t = {
       strategyOverline: "Strategy",
       strategyHeading: "Who is your target audience?",
       strategyDesc: "English is spoken across the world, so translating into English can open up many markets. It is important to understand who your English-speaking customers are: do you want an international version of your website, or are you targeting the UK or US specifically? Perhaps even Australia or New Zealand?",
-      serviceTypesOverline: "What I offer",
+      serviceTypesOverline: "What is transcreation?",
       serviceTypesHeading: "What is transcreation?",
       serviceTypes: [
         {
-          title: "Translation",
-          description: "Accurate rendering of the original text, ensuring the message is conveyed clearly and fluently in English.",
-        },
-        {
           title: "Transcreation",
           description: "Transcreation is a creative translation where the source is taken as inspiration and recreated to ensure it resonates with the target audience. It is a great choice for marketing campaigns that need to have an emotional effect and capture the reader. Cultural references, rhymes, plays on words and humour require cultural understanding and a firm grasp of who the target audience is. By merging the processes of copywriting and translation, truly authentic texts emerge that will engage and enthral the reader.",
-        },
-        {
-          title: "SEO Translation",
-          description: "Optimising translated content for search engines, ensuring your brand is discoverable by English-speaking customers.",
-        },
-        {
-          title: "Localisation",
-          description: "Adapting content for regional language and cultural norms, different spelling variants, vocabulary, grammar, tone, cultural references, regulatory frameworks and more. Every region is different, and localisation ensures credibility by allowing content to connect with readers in the most familiar language.",
         },
       ],
       relatedOverline: "Related services",
@@ -701,24 +689,12 @@ export const t = {
       strategyOverline: "Strategie",
       strategyHeading: "Wer ist Ihre Zielgruppe?",
       strategyDesc: "Englisch wird weltweit gesprochen, Übersetzungen ins Englische öffnen viele Märkte. Es ist wichtig zu verstehen, wer Ihre englischsprachigen Kunden sind: Möchten Sie eine internationale Version Ihrer Website, oder sprechen Sie gezielt den UK- oder US-Markt an? Vielleicht sogar Australien oder Neuseeland?",
-      serviceTypesOverline: "Mein Angebot",
+      serviceTypesOverline: "Was ist Transkreation?",
       serviceTypesHeading: "Was ist Transkreation?",
       serviceTypes: [
         {
-          title: "Übersetzung",
-          description: "Präzise Wiedergabe des Ausgangstexts, damit die Botschaft klar und flüssig auf Englisch vermittelt wird.",
-        },
-        {
           title: "Transkreation",
           description: "Transkreation ist eine kreative Übersetzung, bei der der Ausgangstext als Inspiration dient und so neu gestaltet wird, dass er die Zielgruppe anspricht. Sie ist eine hervorragende Wahl für Marketingkampagnen, die eine emotionale Wirkung erzielen und den Leser fesseln sollen. Kulturelle Referenzen, Reime, Wortspiele und Humor erfordern kulturelles Verständnis und ein genaues Wissen darüber, wer die Zielgruppe ist. Durch die Verbindung von Texter- und Übersetzungsprozessen entstehen wirklich authentische Texte, die den Leser begeistern.",
-        },
-        {
-          title: "SEO-Übersetzung",
-          description: "Optimierung übersetzter Inhalte für Suchmaschinen, damit Ihre Marke für englischsprachige Kunden auffindbar ist.",
-        },
-        {
-          title: "Lokalisierung",
-          description: "Anpassung von Inhalten an regionale Sprach- und Kulturstandards, unterschiedliche Schreibweisen, Vokabular, Grammatik, Ton, kulturelle Referenzen, regulatorische Rahmenbedingungen und mehr. Jede Region ist anders, und Lokalisierung sorgt dafür, dass Inhalte Leser in der vertrautesten Sprache ansprechen.",
         },
       ],
       relatedOverline: "Verwandte Leistungen",
